@@ -1,13 +1,17 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #09090A;
   color: white;
-
-  display: grid;
-  place-items: center;
-
   height: 100vh;
+}
+
+button {
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #8B5CF6;
 }
