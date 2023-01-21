@@ -6,7 +6,7 @@ button.addEventListener("click", add);
 form.addEventListener("change", save);
 
 function add() {
-  const today = new Date().toLocaleDateString('pt-br').slice(0, -5)
+  const today = new Date().toLocaleDateString("pt-br").slice(0, -5);
 
   const dayExists = nlwSetup.dayExists(today);
 
@@ -15,14 +15,15 @@ function add() {
     return;
   }
 
-  alert("Adicionado com sucesso ✅")
+  alert("Adicionado com sucesso ✅");
   nlwSetup.addDay(today);
 }
 
 function save() {
-    localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data));
+  localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data));
 }
 
-const data = JSON.parse(localStorage.getItem('NLWSetup@habits')) || {}
+const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {};
 nlwSetup.setData(data);
 nlwSetup.load();
+    
